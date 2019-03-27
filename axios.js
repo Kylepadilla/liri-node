@@ -30,7 +30,7 @@ var Run = function (){
             },
         
 
-    this.concerts = function(artist){
+    this.Concerts = function(artist){
 
         var URL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
         axios.get(URL)
