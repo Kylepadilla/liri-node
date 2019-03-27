@@ -23,9 +23,9 @@ if (search === "event") {
 }
 if (search === "movie") {
   console.log("Searching for movie info...");
-
   r.movies(term);
 }}
+}
 execute();
 
 if (search === "random") {
@@ -42,4 +42,5 @@ if (search === "random") {
         execute()
 
 })}
+
 
