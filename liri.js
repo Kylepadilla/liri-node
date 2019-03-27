@@ -4,29 +4,28 @@ var r = new Run();
 var fs = require('fs')
 
 var search = process.argv[2];
-var term = process.argv.slice(3).join(" ");
+var term = process.argv.slice(3).join("");
+var termp = process.argv.slice(3).join("+");
 
-var songDefault = 'ace of base'
+// var songDefault = 'ace of base';
+// var movieDefault = "mr.nobody"
 
 function execute(){
 
-if (search === "spotify" && term !== "") {
+if (search === "spotify") {
   console.log("Searching for song info...");
   r.spotify(term);
-}else {
-      r.spotify(songDefault)
-    }
 
 if (search === "event") {
   console.log("Searching for event info...");
   r.concerts(term);
+  console.log(term);
 }
 if (search === "movie") {
   console.log("Searching for movie info...");
-  r.movie(term);
 
-}
-}
+  r.movies(term);
+}}
 execute();
 
 if (search === "random") {
@@ -40,7 +39,6 @@ if (search === "random") {
         var inputTest = y
         search = commandReplace
         term = inputTest
-        console.log("it:  " + inputTest)
         execute()
 
 })}
